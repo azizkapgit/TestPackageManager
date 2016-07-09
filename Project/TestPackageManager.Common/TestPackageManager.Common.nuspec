@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package>
+
+  <metadata>
+
+    <id>TestPackageManager.Common</id>
+
+    <version>1.0.0.0</version>
+
+    <authors>Aziz Kapadia</authors>
+
+    <description>TestPackageManager Common</description>
+
+  </metadata>
+
+  <files>
+
+    <file src="$OutputPath$\TestPackageManager.Common.dll" target="lib" />
+    <file src="$OutputPath$\TestPackageManager.Common.pdb" target="lib" />
+
+  </files>
+
+</package>
