@@ -15,8 +15,8 @@
 
   <files>
 
-    <file src="$OutputPath$TestPackageManager.Common.dll" target="\lib" />
-    <file src="$OutputPath$TestPackageManager.Common.pdb" target="\lib" />
+    <file src="$OutputPath$\TestPackageManager.Common.dll" target="\lib" />
+    <file src="$OutputPath$\TestPackageManager.Common.pdb" target="\lib" />
 
   </files>
 
