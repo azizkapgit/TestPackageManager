@@ -9,6 +9,11 @@ namespace TestPackageManager.Common
 {
     public class Utility
     {
+        /// <summary>
+        /// Get Application Settings by config key
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public static string GetAppSetting(string key)
         {
             return ConfigurationManager.AppSettings[key];
