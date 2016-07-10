@@ -16,6 +16,7 @@ namespace TestPackageManager.Common
         /// <returns></returns>
         public static string GetAppSetting(string key)
         {
+            //Testing changes
             return ConfigurationManager.AppSettings[key];
         }
     }
