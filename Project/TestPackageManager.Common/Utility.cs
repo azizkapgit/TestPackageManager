@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,12 +13,48 @@ namespace TestPackageManager.Common
         /// <summary>
         /// Get Application Settings by config key
         /// </summary>
-        /// <param name="key"></param>
-        /// <returns></returns>
-        public static string GetAppSetting(string key)
+        /// <param name="key">string key</param>
+        /// <returns>Returns parsed value</returns>
+        public static T GetAppSetting<T>(string key, T defaultValue)
         {
             //Testing changes
-            return ConfigurationManager.AppSettings[key];
+            if (string.IsNullOrEmpty(key))
+            {
+                throw (new ArgumentNullException("Application Setting key is null or empty"));
+            }
+
+            if (ConfigurationManager.AppSettings[key] == null)
+            {
+                return defaultValue;
+
+            }
+
+            string settingValue = ConfigurationManager.AppSettings[key];
+
+            return TryParse<T>(settingValue);
+        }
+
+        private static T TryParse<T>(string settingValue)
+        {
+            try
+            {
+
+                if (settingValue == null)
+                {
+                    return default(T);
+                }
+
+                return (T)(System.ComponentModel.TypeDescriptor.GetConverter(typeof(T)).ConvertFrom(settingValue));
+
+            }
+            catch (Exception ex)
+            {
+                Debug.Print("Exception: {0}", ex.Message);
+
+                throw new Exception("Error trying to parse setting - " + settingValue.ToString());
+
+            }
+
         }
     }
 }
