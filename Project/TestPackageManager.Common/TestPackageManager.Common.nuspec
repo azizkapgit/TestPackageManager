@@ -5,7 +5,7 @@
 
     <id>TestPackageManager.Common</id>
 
-    <version>$version$</version>
+    <version>1.0.(build)</version>
 
     <authors>Aziz Kapadia</authors>
 
