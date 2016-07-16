@@ -5,7 +5,7 @@
 
     <id>TestPackageManager.Common</id>
 
-    <version>$version$</version>
+    <version></version>
 
     <authors>Aziz Kapadia</authors>
 
@@ -15,8 +15,8 @@
 
   <files>
 
-    <file src="$OutputPath$TestPackageManager.Common.dll" target="\lib" />
-    <file src="$OutputPath$TestPackageManager.Common.pdb" target="\lib" />
+    <file src="TestPackageManager.Common.dll" target="\lib" />
+    <file src="TestPackageManager.Common.pdb" target="\lib" />
 
   </files>
 
