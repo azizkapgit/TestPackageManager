@@ -1,23 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<package>
-
+<?xml version="1.0"?>
+<package >
   <metadata>
-
-    <id>TestPackageManager.Common</id>
-
-    <version>1.0.0.2</version>
-
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
     <authors>Aziz Kapadia</authors>
-
-    <description>TestPackageManager Common</description>
-
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <copyright>Copyright 2016</copyright>
+    <tags>Test Aziz</tags>
   </metadata>
-
   <files>
-
-    <file src="TestPackageManager.Common.dll" target="\lib" />
-    <file src="TestPackageManager.Common.pdb" target="\lib" />
-
+    <file src="$OutputPath$TestPackageManager.Common.dll" target="\lib" />
+    <file src="$OutputPath$TestPackageManager.Common.pdb" target="\lib" />
   </files>
-
 </package>
