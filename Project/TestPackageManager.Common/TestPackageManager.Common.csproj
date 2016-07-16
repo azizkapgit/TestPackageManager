@@ -71,7 +71,7 @@
   </Target>
   -->
   <Target Name="AfterBuild">
-    <Exec Command="$(SolutionDir).nuget\nuget.exe pack $(SolutionDir)TestPackageManager.Common\TestPackageManager.Common.csproj -Prop Configuration=Release"></Exec>
+    <Exec Command="$(SolutionDir).nuget\nuget.exe pack $(SolutionDir)testpackagemanager.common\testpackagemanager.common.csproj -Prop Configuration=Release"></Exec>
   </Target>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
