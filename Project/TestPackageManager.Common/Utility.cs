@@ -16,7 +16,7 @@ namespace TestPackageManager.Common
             //Testing changes
             if (string.IsNullOrEmpty(key))
             {
-                throw (new ArgumentNullException("Application Setting key is null or empty"));
+                throw (new ArgumentNullException(@"Application Setting key is null or empty"));
             }
 
             if (ConfigurationManager.AppSettings[key] == null)
@@ -30,6 +30,12 @@ namespace TestPackageManager.Common
             return TryParse<T>(settingValue);
         }
 
+        /// <summary>
+        /// Try to parse value 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="settingValue"></param>
+        /// <returns></returns>
         private static T TryParse<T>(string settingValue)
         {
             try
